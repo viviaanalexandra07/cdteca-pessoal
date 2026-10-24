@@ -3,7 +3,6 @@
 
 #define MAX_CDS 50
 
-// Estrutura exigida pelo escopo do projeto
 typedef struct {
     int id;
     char titulo[50];
@@ -13,7 +12,7 @@ typedef struct {
     int reproducoes;
 } CD;
 
-// --- MÓDULO A: Gerenciamento de Acervo (Cadastrar, Listar, Incrementar Reproduções) ---
+// --- MÃ“DULO A: Gerenciamento de Acervo (Cadastrar, Listar, Incrementar ReproduÃ§Ãµes) ---
 void cadastrarCD(CD cdteca[], int *quantidade) {
     if (*quantidade >= MAX_CDS) {
         printf("\n[Erro] A CDteca esta cheia!\n");
@@ -21,7 +20,7 @@ void cadastrarCD(CD cdteca[], int *quantidade) {
     }
     
     printf("\n--- CADASTRAR NOVO CD ---\n");
-    cdteca[*quantidade].id = *quantidade + 1; // ID automático
+    cdteca[*quantidade].id = *quantidade + 1; // ID automÃ¡tico
     printf("ID gerado: %d\n", cdteca[*quantidade].id);
     
     printf("Digite o titulo do album: ");
@@ -87,7 +86,7 @@ void incrementarReproducao(CD cdteca[], int quantidade) {
     printf("\n[Erro] ID nao encontrado.\n");
 }
 
-// --- MÓDULO B: Relatórios e Ordenação (Ranking, Filtro por Gênero, Busca) ---
+// --- MÃ“DULO B: RelatÃ³rios e OrdenaÃ§Ã£o (Ranking, Filtro por GÃªnero, Busca) ---
 void rankingMaisOuvidos(CD cdteca[], int quantidade) {
     if (quantidade == 0) {
         printf("\n[Aviso] Nao ha CDs cadastrados.\n");
@@ -175,7 +174,7 @@ void buscarArtistaOuTitulo(CD cdteca[], int quantidade) {
     }
 }
 
-// --- MÓDULO C: Menu Interativo Principal ---
+// --- MÃ“DULO C: Menu Interativo Principal ---
 int main() {
     CD minhaCdteca[MAX_CDS];
     int totalCds = 0;
