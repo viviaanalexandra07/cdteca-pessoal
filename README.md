@@ -10,7 +10,6 @@ Projeto desenvolvido para gerenciamento de uma coleção de CDs, permitindo cada
 
 #define MAX_CDS 50
 
-// Estrutura exigida pelo escopo do projeto
 typedef struct {
     int id;
     char titulo[50];
